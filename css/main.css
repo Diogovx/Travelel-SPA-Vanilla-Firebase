@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root{
+    font-size: 60%; /*Controle de medidas em rem*/
+    --text-color-green: #015249;
+    --text-color-white: #ffffff;
+    --color-green: #57bc90;
+    --color-grey: #a5a5af;
+    --color-blue: #77c9d4;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+header,nav,main,footer,aside{
+    display: block;
+    width: 100%;
+    font-size: 1.6rem;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Estrutura do templa */
+.wrap {
+    width: 100%;
+    max-width: 960px;
+    min-width: 300px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+main {
+    flex-grow: 1;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.3rem;
+    background: var(--color-green);
+    color: var(--text-color-white);
+}
+header i{
+    font-size: 5rem;
+    -webkit-text-stroke: #000 1px;
+}
+header h1{
+    font-size: 3rem;
+    margin: 0.8rem;
+}
+
+nav{
+    background: linear-gradient(to right, var(--color-blue), var(--color-green));
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav a{
+    color: var(--text-color-white);
+    font-size: 1.5rem;
+    padding: 0.9rem;
+    text-align: center;
+}
+nav a:first-child{
+    margin-right: auto;
+}
+nav a:hover{
+    color: var(--text-color-white);
+    background: var(--color-blue);
+}
+nav span{
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    display: none;
+    background-color: var(--color-grey);
+    
+    text-align: center;
+}
+
+
+@media (min-width: 575px){
+    header{ order: 1;}
+    nav{ order: 2;}
+    main{ order: 3;}
+    
+    footer{
+        order: 4;
+        display: block;
+        background-color: var(--color-grey);
+        color: var(--text-color-white);
+        text-align: center;
+    }
+}
